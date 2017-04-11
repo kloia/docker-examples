@@ -11,7 +11,7 @@ ADD https://download.newrelic.com/php_agent/release/newrelic-php5-${NEWRELIC_VER
 WORKDIR /opt/newrelic
 RUN tar -zxvf newrelic-php5-${NEWRELIC_VERSION}-linux.tar.gz
 ENV NR_INSTALL_SILENT false
-ENV NR_INSTALL_KEY 4c1e55bb23231d54055f7aedee86e37cc8966ebf
+ENV NR_INSTALL_KEY <YOUR_LICENCE_KEY>
 RUN mkdir -p /var/log/newrelic
 RUN mkdir -p /var/run/newrelic
 
