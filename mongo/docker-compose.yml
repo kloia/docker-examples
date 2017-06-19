@@ -1,0 +1,15 @@
+version: "3"
+services:
+  mongo:
+    image: mongo
+    volumes:
+      - mongo-dev:/data/db
+    ports:
+      - "27017:27017"
+    deploy:
+      placement:
+        constraints: [node.labels.environment == dev]
+
+volumes:
+  mongo-dev:
+    external: true
