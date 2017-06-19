@@ -1,0 +1,26 @@
+version: "3"
+services:
+  oracle:
+    image: oracle-xe-11g:latest
+    ports:
+      - "1521:1521"
+    environment:
+      - ORACLE_ALLOW_REMOTE=true
+      - USERNAME=username
+      - PASSWORD=password
+    volumes:
+      - oracle:/u01/app/oracle
+    deploy:
+      placement:
+        constraints: [node.labels.environment == dev]
+    networks:
+      default:
+        aliases:
+          - service
+          
+volumes:
+  oracle-dev:
+    external: true
+
+networks:
+  default:
