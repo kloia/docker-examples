@@ -1,0 +1,9 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: result
+  namespace: default
+spec:
+  backend:
+    serviceName: result
+    servicePort: 5001

@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: result
+spec:
+  template:
+    metadata:
+      labels:
+        app: votingapp
+    spec:  
+      containers:
+      - name: result
+        image: eesprit/voting-app-result:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80
+          protocol: TCP

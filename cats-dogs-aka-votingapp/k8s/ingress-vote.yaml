@@ -1,0 +1,9 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: vote
+  namespace: default
+spec:
+  backend:
+    serviceName: vote
+    servicePort: 5000

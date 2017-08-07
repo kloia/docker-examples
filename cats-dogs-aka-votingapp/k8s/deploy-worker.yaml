@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: worker
+spec:
+  template:
+    metadata:
+      labels:
+        app: votingapp
+    spec:  
+      containers:
+      - name: worker
+        image: eesprit/voting-app-worker:latest
+        imagePullPolicy: IfNotPresent
