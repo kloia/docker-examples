@@ -11,6 +11,6 @@ spec:
     protocol: TCP
     targetPort: 6379
   selector:
-    run: redis
+    component: redis
   sessionAffinity: None
   type: ClusterIP

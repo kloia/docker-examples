@@ -1,9 +1,8 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: result
-  namespace: default
+  name: result-ingress
 spec:
   backend:
     serviceName: result
-    servicePort: 5001
+    servicePort: 80
